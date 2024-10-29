@@ -9,6 +9,15 @@ spring:
           lower-case-service-id: true
       routes:
         -id: hotels-service
+        uri: lb://hotels-service
+        predicates:
+          - Path=/hotels/**
+        -id: cities-service
+        uri: lb://cities-service
+        predicates:
+          - Path=/cities/**
+     
+         
 
 server:
   port: 8080
