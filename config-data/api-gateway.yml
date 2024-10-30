@@ -8,8 +8,10 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        -id: hotels-service
+        - id: lb://cities-service
+          uri: lb://CITIES-SERVICE
+          predicates:
+            - Path=/cities/**
 
 server:
   port: 8080
-
