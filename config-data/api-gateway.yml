@@ -12,6 +12,10 @@ spring:
           uri: lb://CITIES-SERVICE
           predicates:
             - Path=/cities/**
+        - id: lb://hotels-service
+          uri: lb://HOTELS-SERVICE
+          predicates:
+            - Path=/hotels/**
 
 server:
   port: 8080
