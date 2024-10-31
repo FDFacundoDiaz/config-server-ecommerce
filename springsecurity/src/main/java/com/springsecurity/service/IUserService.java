@@ -7,10 +7,11 @@ import java.util.Optional;
 
 public interface IUserService {
 
-    public List<UserSec> findAll();
-    public Optional<UserSec> findById(Long id);
-    public UserSec save(UserSec userSec);
-    public void deleteById(Long id);
-    public void update(UserSec userSec);
+    List<UserSec> findAll();
+    Optional<UserSec> findById(Long id);
+    UserSec save(UserSec userSec);
+    void deleteById(Long id);
+    void update(UserSec userSec);
+
 
 }

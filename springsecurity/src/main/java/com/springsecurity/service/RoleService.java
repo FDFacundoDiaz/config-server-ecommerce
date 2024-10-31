@@ -18,22 +18,18 @@ public class RoleService implements IRoleService {
     public List<Role> findAll() {
         return roleRepository.findAll();
     }
-
     @Override
     public Optional<Role> findById(Long id) {
         return roleRepository.findById(id);
     }
-
     @Override
     public Role save(Role role) {
         return roleRepository.save(role);
     }
-
     @Override
     public void deleteById(Long id) {
         roleRepository.deleteById(id);
     }
-
     @Override
     public Role update(Role role) {
         return roleRepository.save(role);

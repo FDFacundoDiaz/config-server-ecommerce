@@ -18,22 +18,18 @@ public class UserService implements IUserService {
     public List<UserSec> findAll() {
         return userRepository.findAll();
     }
-
     @Override
     public Optional<UserSec> findById(Long id) {
         return userRepository.findById(id);
     }
-
     @Override
     public UserSec save(UserSec userSec) {
         return userRepository.save(userSec);
     }
-
     @Override
     public void deleteById(Long id) {
         userRepository.deleteById(id);
     }
-
     @Override
     public void update(UserSec userSec) {
         save(userSec);
