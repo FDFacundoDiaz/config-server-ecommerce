@@ -1,0 +1,27 @@
+# Configuraciones varias
+spring:
+  application:
+    name: springsecurity
+server:
+  port: 8000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+# Configuraciones de seguridad
+spring:
+  security:
+    user:
+      name: ${SS_USER}
+      password: ${SS_PASSWORD}
+
+# Configuraciones de BD
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: ${BD_URL}
+    username: ${BD_USER}
+    password: ${BD_PASSWORD}

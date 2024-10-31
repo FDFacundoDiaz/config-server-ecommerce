@@ -1,16 +1,32 @@
 spring:
   application:
     name: api-gateway
+
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
+<<<<<<< HEAD
      
      
          
+=======
+      routes:
+        - id: lb://cities-service
+          uri: lb://CITIES-SERVICE
+          predicates:
+            - Path=/cities/**
+        - id: lb://hotels-service
+          uri: lb://HOTELS-SERVICE
+          predicates:
+            - Path=/hotels/**
+        - id: lb://springsecurity
+          uri: lb://SPRINGSECURITY
+          predicates:
+            - Path=//api/permissions/**, /api/roles/**, /api/users/**
+>>>>>>> rama1
 
 server:
   port: 8080
-
